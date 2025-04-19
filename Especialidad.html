@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Especi.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/bootstrap.js"></script>
+</head>
+<body class="body">
+<!-- Barra Superior -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <span><img src="img/correo.png" class="icono"> correoelectronico@gmail.com</span>
+            <span><img src="img/ubicacion.png" alt="Ubicación" class="icono"> Ubicación de la empresa</span>
+            <span><img src="img/llamada-telefonica.png" alt="Teléfono" class="icono"> Teléfono</span>
+        </div>
+    </div>
+
+<!-- Barra Principal -->
+    <nav class="main-nav">
+        <div class="logo">
+            <a href="#"><img src="imagenes/Logo_Nav.png" alt="Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Ingresar</a></li>
+            <li><a href="#">Registrarme</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Mi Perfil</a></li>
+        </ul>
+    </nav>
+
+<!--Menu-->
+<h1 style="text-align: center;">Buscar Por Especialidad</h1>
+
+<div class="form-container">
+  <label for="especialidad">Especialidad</label>
+  <select id="especialidad" name="especialidad">
+    <option value="" disabled selected>Seleccioná una especialidad</option>
+    <option>Cardiología</option>
+    <option>Neurología</option>
+    <option>Dermatología</option>
+    <option>Pediatría</option>
+    <option>Ginecología</option>
+    <option>Traumatología</option>
+    <!-- Agregá más si querés -->
+  </select>
+
+  <label for="sede">Clínica o Centro Médico</label>
+  <select id="sede" name="sede">
+    <option value="" disabled selected>Seleccioná una sede</option>
+    <option>Sede Central</option>
+    <option>Sede Norte</option>
+    <option>Sede Sur</option>
+  </select>
+
+  <div class="checkbox-container">
+    <label><input type="checkbox" checked> Por Mi Cobertura</label>
+    <label><input type="checkbox" checked> Por Mi Cobertura Y Particular</label>
+  </div>
+
+  <button onclick="buscar()">Confirmar</button>
+</div>
+ <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h5>Email</h5>
+                <p>Nombre@Nombre.com.ar</p>
+                <p>Nombre@Nombre.com.ar</p>
+            </div>
+            <div class="footer-column">
+                <h5>Teléfono</h5>
+                <p>Línea Gratuita: 212202</p>
+                <p>Teléfono Fijo: 2122021</p>
+            </div>
+            <div class="footer-column">
+                <h5>Ubicación</h5>
+                <p>Sede Central:</p>
+                <p>Calle Siempreviva 123</p>
+            </div>
+            <div class="footer-column logo-redes">
+                <img src="imagenes/logo_footer.png" alt="Salud Expres" class="footer-logo">
+                <div class="redes-sociales">
+                    <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="img/Facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="img/linkedin.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copy">
+            © Copyright 2025. Todos los derechos reservados Nombre
+        </div>
+    </footer>
+    <script>
+        function buscar() {
+          const esp = document.getElementById("especialidad").value;
+          const sede = document.getElementById("sede").value;
+          if (!esp || !sede) {
+            alert("Por favor, completá todos los campos.");
+            return;
+          }
+          alert(`Buscando médicos de ${esp} en ${sede}...`);
+        }
+      </script>
+</body>
+</html>

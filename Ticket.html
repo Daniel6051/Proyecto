@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pago Confirmado</title>
+  <link rel="stylesheet" href="estiloticket.css" />
+  <link rel="stylesheet" href="datos.js" />
+</head>
+<body>
+  <!-- Barra Superior -->
+  <div class="top-bar">
+    <div class="top-bar-content">
+      <span><img src="img/correo.png"class="icono"> correoelectronico@gmail.com</span>
+      <span><img src="img/ubicacion.png" alt="Ubicación" class="icono"> Ubicación de la empresa</span>
+      <span><img src="img/llamada-telefonica.png" alt="Teléfono" class="icono"> Teléfono</span>
+      </div>
+    </div>
+  
+    <!-- Barra Principal -->
+    <nav class="main-nav">
+      <div class="logo">
+        <a href="index.html"><img src="imagenes/Logo_Nav.png" alt="Logo"></a>
+      </div>
+      <ul class="nav-links">
+          <li><a href="#">Ingresar</a></li>
+          <li><a href="#">Registrarme</a></li>
+          <li><a href="Contacto.html">Contacto</a></li>
+          <li><a href="#">Mi Perfil</a></li>
+      </ul>
+    </nav>
+  <!--Ticket-->  
+  <section class="contenedor-confirmacion">
+    <img src="img/Confirmado.jpeg" alt="Pago confirmado" class="iconos" />
+    <h1>Pago Confirmado</h1>
+    <h3 class="subtitulo">Recordatorio del turno:</h3>
+
+    <div class="formulario-turno">
+      <h4>Turno confirmado</h4>
+      <p>Llegar con anticipación</p>
+
+      <input type="text" id="nombre" placeholder="Nombre Completo" readonly>
+      <input type="text" id="profesional" placeholder="Profesional" readonly>
+      <input type="text" id="especialidad" placeholder="Especialidad" readonly>
+      <input type="text" id="valor" placeholder="Valor" readonly>
+      <input type="text" id="ubicacion" placeholder="Ubicación" readonly>
+
+      <button onclick="descargarTurno()">Descargar Turno</button>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h5>Email</h5>
+            <p>Nombre@Nombre.com.ar</p>
+            <p>Nombre@Nombre.com.ar</p>
+        </div>
+        <div class="footer-column">
+            <h5>Teléfono</h5>
+            <p>Línea Gratuita: 212202</p>
+            <p>Teléfono Fijo: 2122021</p>
+        </div>
+        <div class="footer-column">
+            <h5>Ubicación</h5>
+            <p>Sede Central:</p>
+            <p>Calle Siempreviva 123</p>
+        </div>
+        <div class="footer-column logo-redes">
+            <img src="imagenes/logo_footer.png" alt="Salud Expres" class="footer-logo">
+            <div class="redes-sociales">
+                <!-- Acá van tus íconos -->
+                <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="img/Facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="img/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copy">
+        © Copyright 2025. Todos los derechos reservados Nombre
+    </div>
+  </footer>
+  <script src="datos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</body>
+</html>

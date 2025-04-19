@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nuevo Turno</title>
+  <link rel="stylesheet" href="turnosnuev.css" />
+  
+</head>
+<body>
+
+  <!-- Barra Superior -->
+  <div class="top-bar">
+    <div class="top-bar-content">
+      <span><img src="img/correo.png"class="icono"> correoelectronico@gmail.com</span>
+      <span><img src="img/ubicacion.png" alt="Ubicación" class="icono"> Ubicación de la empresa</span>
+      <span><img src="img/llamada-telefonica.png" alt="Teléfono" class="icono"> Teléfono</span>
+    </div>
+  </div>
+
+  <!-- Barra Principal -->
+  <nav class="main-nav">
+    <div class="logo">
+        <a href="index.html"><img src="imagenes/Logo_Nav.png" alt="Logo"></a>
+    </div>
+    <ul class="nav-links">
+        <li><a href="#">Ingresar</a></li>
+        <li><a href="#">Registrarme</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+        <li><a href="#">Mi Perfil</a></li>
+    </ul>
+  </nav>
+
+  <!--Inicio-->
+  <h1>Nuevo Turno</h1>
+
+  <div class="contenedor-turno">
+    <label>Especialidad seleccionada:</label>
+    <div class="especialidad">Cardiología</div>
+
+    <label for="fecha">Fecha del turno:</label>
+    <input type="date" id="fecha" name="fecha">
+
+    <label for="hora">Hora del turno:</label>
+    <input type="time" id="hora" name="hora">
+
+    <label for="sede">Sede:</label>
+    <select id="sede" name="sede">
+      <option value="central">Sede Central</option>
+      <option value="norte">Sede Norte</option>
+      <option value="sur">Sede Sur</option>
+    </select>
+
+    <button onclick="confirmarTurno()">Confirmar Turno</button>
+  </div>
+  <!--Footer-->
+  <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h5>Email</h5>
+            <p>Nombre@Nombre.com.ar</p>
+            <p>Nombre@Nombre.com.ar</p>
+        </div>
+        <div class="footer-column">
+            <h5>Teléfono</h5>
+            <p>Línea Gratuita: 212202</p>
+            <p>Teléfono Fijo: 2122021</p>
+        </div>
+        <div class="footer-column">
+            <h5>Ubicación</h5>
+            <p>Sede Central:</p>
+            <p>Calle Siempreviva 123</p>
+        </div>
+        <div class="footer-column logo-redes">
+            <img src="imagenes/logo_footer.png" alt="Salud Expres" class="footer-logo">
+            <div class="redes-sociales">
+                <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="img/Facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="img/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copy">
+        © Copyright 2025. Todos los derechos reservados Nombre
+    </div>
+  </footer>
+  <script>
+    function confirmarTurno() {
+      const fecha = document.getElementById("fecha").value;
+      const hora = document.getElementById("hora").value;
+      const sede = document.getElementById("sede").value;
+
+      if (!fecha || !hora) {
+        alert("Por favor, complete todos los campos.");
+        return;
+      }
+
+      alert(`Turno confirmado:\nFecha: ${fecha}\nHora: ${hora}\nSede: ${sede}`);
+    }
+  </script>
+</body>
+</html>

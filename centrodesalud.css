@@ -1,0 +1,156 @@
+@font-face {
+    font-family: tilt-neon-regular;
+    src: url(fuentes/tilt-neon-regular.ttf);
+  }
+  body{
+    font-family: tilt-neon-regular;
+}
+  /* Barra superior */
+      .top-bar {
+          background-color: #A2D6D3;
+          padding: 10px 0;
+          color: white;
+          font-family: tilt-neon-regular;
+        }
+        
+        .top-bar-content {
+          display: flex;
+          justify-content: center;
+          gap: 40px;
+          font-size: 14px;
+          align-items: center;
+          flex-wrap: wrap;
+          color: ffffff;
+        }
+        
+        .top-bar-content span {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+        
+        .icono {
+          width: 16px;
+          height: 16px;
+        }
+        
+  /* Barra principal */
+  .main-nav {
+      background-color: #3A8B8A;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 40px;
+      font-family: tilt-neon-regular;
+  }
+  
+  .main-nav .logo img {
+      height: 80px;
+      width: 150px;
+  }
+  
+  .main-nav .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+  }
+  
+  .main-nav .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+  }
+  
+  .main-nav .nav-links li a:hover {
+      color: #CBEDEB;
+  }
+/*Parte Principal*/
+.centro-salud-container {
+    text-align: center;
+    padding: 20px;
+    font-family: tilt-neon-regular;
+    color: #0b6e71;
+
+  }
+  
+  .imagen-salud {
+    width: 200px;
+    margin: 10px auto;
+    display: block;
+    border-color: #09585a;
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: solid;
+  }
+  
+  .descripcion {
+    max-width: 400px;
+    margin: 10px auto 20px;
+    color: #73D2DE;
+  }
+  
+  .mapa {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .btn-buscar {
+    background-color: #0b6e71;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btn-buscar:hover {
+    background-color: #09585a;
+  }
+
+/*Footer*/
+.footer {
+    background-color: #3b8d92;
+    color: white;
+    padding: 30px 10px 10px;
+    font-family: tilt-neon-regular;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: left;
+    gap: 20px;
+}
+
+.footer-column {
+    min-width: 200px;
+}
+
+.footer-column h5 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-logo {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.redes-sociales a img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.footer-copy {
+    text-align: center;
+    margin-top: 20px;
+    color: #ccc;
+}
+  

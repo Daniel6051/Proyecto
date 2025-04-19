@@ -1,0 +1,206 @@
+@font-face {
+  font-family: tilt-neon-regular;
+  src: url(fuentes/tilt-neon-regular.ttf);
+}
+body{
+  font-family: tilt-neon-regular;
+}
+/* Barra superior */
+    .top-bar {
+        background-color: #A2D6D3;
+        padding: 10px 0;
+        font-family: tilt-neon-regular;
+      }
+      
+      .top-bar-content {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        font-size: 14px;
+        align-items: center;
+        flex-wrap: wrap;
+        color: ffffff;
+      }
+      
+      .top-bar-content span {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      
+      .icono {
+        width: 16px;
+        height: 16px;
+      }
+      
+/* Barra principal */
+.main-nav {
+    background-color: #3A8B8A;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    font-family: tilt-neon-regular;
+}
+
+.main-nav .logo img {
+    height: 80px;
+    width: 150px;
+}
+
+.main-nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.main-nav .nav-links li a:hover {
+    color: #CBEDEB;
+}
+/*Botones*/
+.botones{
+    display: flex;
+    justify-content: center;
+    gap: 95px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.boton {
+    color: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+    font-family: tilt-neon-regular;
+}
+
+.boton:hover {
+    transform: scale(1.05);
+}
+
+/*Slide*/
+#carouselExample{
+    max-width: 93%;
+    max-height: 500px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}   
+/* Cartas generales */
+.custom-card {
+    width: 50vw; 
+    border: none;
+    left: 3px;
+    top: 25px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    font-family: tilt-neon-regular;
+  }
+  
+  /* Posiciones alternadas */
+  .card-left {
+    margin-right: auto; 
+  }
+  .card-right {
+    margin-left: auto; 
+  }
+  
+  /* Botón común */
+  .custom-btn,
+  #consultar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #006666;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    width: 200px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    cursor: pointer;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+  }
+  
+  .custom-btn:hover,
+  #consultar:hover {
+    background-color: #004c4c;
+    transform: scale(1.05);
+  }
+  
+  /* Color de título */
+  .text-teal {
+    color: #006666;
+  }
+  
+  /* Imagen en columna: cubre bien el espacio */
+  .object-fit-cover {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+  
+
+/*Footer*/
+.footer {
+    background-color: #3b8d92;
+    color: white;
+    padding: 30px 10px 10px;
+    font-family: tilt-neon-regular;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: left;
+    gap: 20px;
+}
+
+.footer-column {
+    min-width: 200px;
+}
+
+.footer-column h5 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-logo {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.redes-sociales a img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.footer-copy {
+    text-align: center;
+    margin-top: 20px;
+    color: #ccc;
+}

@@ -1,0 +1,194 @@
+
+@font-face {
+    font-family: tilt-neon-regular;
+    src: url(fuentes/tilt-neon-regular.ttf);
+}
+/* Barra superior */
+.top-bar {
+    background-color: #A2D6D3;
+    padding: 10px 0;
+    font-family: tilt-neon-regular;
+    color: white;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+    color: ffffff;
+}
+
+.top-bar-content span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icono {
+    width: 16px;
+    height: 16px;
+}
+
+/* Barra principal */
+.main-nav {
+    background-color: #3A8B8A;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    font-family: tilt-neon-regular;
+}
+
+.main-nav .logo img {
+    height: 80px;
+    width: 150px;
+}
+
+.main-nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.main-nav .nav-links li a:hover {
+    color: #CBEDEB;
+}
+
+/*Contenido de la web*/
+body {
+    margin: 0;
+    font-family: tilt-neon-regular;
+    background-color: #fff;
+    color: #004d4d;
+  }
+  
+  .perfil-container {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .perfil-container h2 {
+    font-size: 2.5rem;
+    color: #008080;
+    margin-bottom: 20px;
+  }
+  
+  .foto-perfil {
+    margin-bottom: 20px;
+  }
+  
+  .foto-perfil img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #cfd8dc;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .foto-perfil img:hover {
+    transform: scale(1.05);
+  }
+  
+  .info-perfil {
+    display: inline-block;
+    text-align: left;
+    border: 2px solid #008080;
+    padding: 20px 30px;
+    border-radius: 5px;
+    max-width: 300px;
+    animation: fadeIn 1s ease;
+  }
+  
+  .info-perfil p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+  }
+  
+  .info-perfil span {
+    color: #00aabb;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+/* Botones */
+#btnEditar, #btnGuardar {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #008080;
+    color: white;
+    transition: background-color 0.3s ease;
+    font-family: tilt-neon-regular;
+  }
+  
+  #btnEditar:hover, #btnGuardar:hover {
+    background-color: #006666;
+  }
+  
+  .boton-oculto {
+    display: none;
+  }
+  
+
+  /*Footer*/
+.footer {
+    background-color: #3b8d92;
+    color: white;
+    padding: 30px 10px 10px;
+    font-family: tilt-neon-regular;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: left;
+    gap: 20px;
+}
+
+.footer-column {
+    min-width: 200px;
+}
+
+.footer-column h5 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-logo {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.redes-sociales a img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.footer-copy {
+    text-align: center;
+    margin-top: 20px;
+    color: #ccc;
+}
+  

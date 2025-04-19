@@ -1,0 +1,214 @@
+@font-face {
+    font-family: tilt-neon-regular;
+    src: url(fuentes/tilt-neon-regular.ttf);
+  }
+  body{
+    font-family: tilt-neon-regular;
+  }
+  /* Barra superior */
+      .top-bar {
+          background-color: #A2D6D3;
+          padding: 10px 0;
+          color: white;
+          font-family: tilt-neon-regular;
+        }
+        
+        .top-bar-content {
+          display: flex;
+          justify-content: center;
+          gap: 40px;
+          font-size: 14px;
+          align-items: center;
+          flex-wrap: wrap;
+          color: ffffff;
+        }
+        
+        .top-bar-content span {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+        
+        .icono {
+          width: 16px;
+          height: 16px;
+        }
+        
+  /* Barra principal */
+  .main-nav {
+      background-color: #3A8B8A;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 40px;
+      font-family: tilt-neon-regular;
+  }
+  
+  .main-nav .logo img {
+      height: 80px;
+      width: 150px;
+  }
+  
+  .main-nav .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+  }
+  
+  .main-nav .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+  }
+  
+  .main-nav .nav-links li a:hover {
+      color: #CBEDEB;
+  }
+  /*Parte Principal*/
+body {
+    margin: 0;
+    font-family: tilt-neon-regular;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .contacto {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .contacto h2 {
+    font-size: 2.5rem;
+    color: #008080;
+    margin-bottom: 30px;
+    animation: fadeInDown 1s ease-in-out;
+  }
+  
+  .contacto h2 i {
+    margin-right: 10px;
+  }
+  
+  .contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .mapa {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    animation: zoomIn 1.2s ease;
+  }
+  
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+    padding: 10px;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  .info p {
+    font-size: 1.1rem;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .info p:hover {
+    transform: translateY(-5px);
+    background-color: #e0f7f7;
+  }
+  
+  .info i {
+    color: #008080;
+    margin-right: 10px;
+  }
+  
+  .info a {
+    color: #008080;
+    text-decoration: none;
+  }
+  
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes zoomIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  
+  /* Responsive */
+  @media (min-width: 768px) {
+    .contenido {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .mapa {
+      flex: 1;
+    }
+  
+    .info {
+      flex: 1;
+      padding-left: 40px;
+    }
+  }
+  /*Footer*/
+.footer {
+    background-color: #3b8d92;
+    color: white;
+    padding: 30px 10px 10px;
+    font-family: tilt-neon-regular;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: left;
+    gap: 20px;
+}
+
+.footer-column {
+    min-width: 200px;
+}
+
+.footer-column h5 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-logo {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.redes-sociales a img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.footer-copy {
+    text-align: center;
+    margin-top: 20px;
+    color: #ccc;
+}
+  

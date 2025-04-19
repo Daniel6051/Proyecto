@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="centrodesalud.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/bootstrap.js"></script>
+</head>
+<body>
+    <!-- Barra Superior -->
+    <div class="top-bar">
+      <div class="top-bar-content">
+        <span><img src="img/correo.png"class="icono"> correoelectronico@gmail.com</span>
+        <span><img src="img/ubicacion.png" alt="Ubicación" class="icono"> Ubicación de la empresa</span>
+        <span><img src="img/llamada-telefonica.png" alt="Teléfono" class="icono"> Teléfono</span>
+      </div>
+    </div>
+
+    <!-- Barra Principal -->
+    <nav class="main-nav">
+      <div class="logo">
+          <a href="index.html"><img src="imagenes/Logo_Nav.png" alt="Logo"></a>
+      </div>
+      <ul class="nav-links">
+          <li><a href="#">Ingresar</a></li>
+          <li><a href="#">Registrarme</a></li>
+          <li><a href="Contacto.html">Contacto</a></li>
+          <li><a href="#">Mi Perfil</a></li>
+      </ul>
+    </nav>
+<!-- Contenido principal -->
+<section class="centro-salud-container">
+    <h1>Centro de Salud Cercanos</h1>
+  
+    <img src="imagenes/CentrodeSalud.jpeg" alt="Centro de Salud" class="imagen-salud" />
+  
+    <p class="descripcion">
+      Encontrá el centro de salud más cercano a tu ubicación y accedé rápidamente a atención médica cuando lo necesites.
+    </p>
+  
+    <div class="mapa">
+      <!-- Mapa embebido de Google Maps -->
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3358.7068132043263!2d-68.8458262!3d-32.8894499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e091d6f814e7b%3A0x6a3b6c1d2aaf4506!2sCentro%20de%20Salud!5e0!3m2!1ses!2sar!4v1612891234567" 
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+    <button onclick="buscarCentroSalud()" class="btn-buscar">Buscar</button>
+  </section>
+<!--Footer-->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h5>Email</h5>
+            <p>Nombre@Nombre.com.ar</p>
+            <p>Nombre@Nombre.com.ar</p>
+        </div>
+        <div class="footer-column">
+            <h5>Teléfono</h5>
+            <p>Línea Gratuita: 212202</p>
+            <p>Teléfono Fijo: 2122021</p>
+        </div>
+        <div class="footer-column">
+            <h5>Ubicación</h5>
+            <p>Sede Central:</p>
+            <p>Calle Siempreviva 123</p>
+        </div>
+        <div class="footer-column logo-redes">
+            <img src="imagenes/logo_footer.png" alt="Salud Expres" class="footer-logo">
+            <div class="redes-sociales">
+                <!-- Acá van tus íconos -->
+                <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="img/Facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="img/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copy">
+        © Copyright 2025. Todos los derechos reservados Nombre
+    </div>
+  </footer>
+</body>
+
+<script>
+    function initMap() {
+      const mendoza = { lat: -32.8908, lng: -68.8272 }; // Centro de Mendoza
+
+      const map = new google.maps.Map(document.getElementById("mapa"), {
+        center: mendoza,
+        zoom: 14,
+      });
+
+      new google.maps.Marker({
+        position: mendoza,
+        map: map,
+        title: "Mendoza",
+      });
+    }
+    
+  </script>
+</html>

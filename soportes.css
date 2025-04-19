@@ -1,0 +1,172 @@
+@font-face {
+    font-family: tilt-neon-regular;
+    src: url(fuentes/tilt-neon-regular.ttf);
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+}
+
+/* Barra superior */
+.top-bar {
+    background-color: #A2D6D3;
+    padding: 10px 0;
+    font-family: tilt-neon-regular;
+    color: white;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+    color: ffffff;
+}
+
+.top-bar-content span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icono {
+    width: 16px;
+    height: 16px;
+}
+
+/* Barra principal */
+.main-nav {
+    background-color: #3A8B8A;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    font-family: tilt-neon-regular;
+}
+
+.main-nav .logo img {
+    height: 80px;
+    width: 150px;
+}
+
+.main-nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.main-nav .nav-links li a:hover {
+    color: #CBEDEB;
+}
+
+/*Contenido de la web soporte */
+.ContenidoSoporte {
+    text-align: center;
+}
+
+.IconoSoporte {
+    width: 135px;
+    height: 135px;
+    display: block;
+    margin: 30px auto;
+}
+
+
+.Titulo {
+    color: 006D77;
+    text-align: center;
+    width: 100%;
+    font-family: tilt-neon-regular;
+}
+
+
+.Subtitulo {
+    color: 83C5BE;
+    text-align: center;
+    width: 100%;
+    font-family: tilt-neon-regular;
+}
+
+.btn.btn-primary {
+    margin: 20 auto;
+    background-color: #006D77;
+    border-color: #006D77;
+    color: white;
+    width: 135px;
+    height: 40px;
+   font-family: tilt-neon-regular;
+}
+
+.btn.btn-primary:hover {
+    background-color: #005f66;
+    border-color: #005f66;
+
+}
+  
+
+/*Footer*/
+.footer {
+    background-color: #3b8d92;
+    color: white;
+    padding: 30px 10px 10px;
+    font-family: tilt-neon-regular;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: left;
+    gap: 20px;
+}
+
+.footer-column {
+    min-width: 200px;
+}
+
+.footer-column h5 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-logo {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.redes-sociales a img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.footer-copy {
+    text-align: center;
+    margin-top: 20px;
+    color: #ccc;
+}

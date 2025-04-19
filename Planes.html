@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="planess.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/bootstrap.js"></script>
+</head>
+<body class="body">
+    <!-- Barra Superior -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <span><img src="img/correo.png" class="icono"> correoelectronico@gmail.com</span>
+            <span><img src="img/ubicacion.png" alt="Ubicación" class="icono"> Ubicación de la empresa</span>
+            <span><img src="img/llamada-telefonica.png" alt="Teléfono" class="icono"> Teléfono</span>
+        </div>
+    </div>
+
+    <!-- Barra Principal -->
+    <nav class="main-nav">
+        <div class="logo">
+            <a href="#"><img src="imagenes/Logo_Nav.png" alt="Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Ingresar</a></li>
+            <li><a href="#">Registrarme</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Mi Perfil</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido del soporte -->
+    <main class="main-content">
+        <h1 style="color: #218380;">Planes</h1>
+
+        <div class="planes-container">
+          <div class="plan" onclick="seleccionar(this, 'Tarjeta Bronce')">
+            <div class="tarjeta bronce">
+              <div>1234 5678 8976 5432</div>
+              <div>12/23</div>
+              <div>SUSAN SMITH</div>
+            </div>
+            <div class="descripcion">
+              <h3>Tarjeta Bronce</h3>
+              <p>Acceso a consultas generales, descuentos en análisis básicos, turnos programados y orientación médica telefónica.</p>
+            </div>
+          </div>
+      
+          <div class="plan" onclick="seleccionar(this, 'Tarjeta Plata')">
+            <div class="tarjeta plata">
+              <div>1234 5678 8976 5432</div>
+              <div>12/23</div>
+              <div>SUSAN SMITH</div>
+            </div>
+            <div class="descripcion">
+              <h3>Tarjeta Plata</h3>
+              <p>Incluye todos los beneficios Bronce más especialistas, odontología básica y pequeños estudios.</p>
+            </div>
+          </div>
+      
+          <div class="plan" onclick="seleccionar(this, 'Tarjeta Oro')">
+            <div class="tarjeta oro">
+              <div>1234 5678 8976 5432</div>
+              <div>12/23</div>
+              <div>SUSAN SMITH</div>
+            </div>
+            <div class="descripcion">
+              <h3>Tarjeta Oro</h3>
+              <p>Estudios avanzados, rehabilitación, ginecología completa, descuentos en farmacia.</p>
+            </div>
+          </div>
+      
+          <div class="plan" onclick="seleccionar(this, 'Tarjeta Diamante')">
+            <div class="tarjeta diamante">
+              <div>1234 5678 8976 5432</div>
+              <div>12/23</div>
+              <div>SUSAN SMITH</div>
+            </div>
+            <div class="descripcion">
+              <h3>Tarjeta Diamante</h3>
+              <p>Acceso total a servicios médicos, cirugías programadas, internaciones, y cobertura total.</p>
+            </div>
+          </div>
+      
+          <div class="plan" onclick="seleccionar(this, 'Tarjeta Negra')">
+            <div class="tarjeta negra">
+              <div>1234 5678 8976 5432</div>
+              <div>12/23</div>
+              <div>SUSAN SMITH</div>
+            </div>
+            <div class="descripcion">
+              <h3>Tarjeta Negra</h3>
+              <p>Servicio premium exclusivo, sin esperas, médico a domicilio, cobertura internacional.</p>
+            </div>
+          </div>
+        </div>
+      
+        <button class="btn-comprar" onclick="comprar()">Comprar</button>
+        
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h5>Email</h5>
+                <p>Nombre@Nombre.com.ar</p>
+                <p>Nombre@Nombre.com.ar</p>
+            </div>
+            <div class="footer-column">
+                <h5>Teléfono</h5>
+                <p>Línea Gratuita: 212202</p>
+                <p>Teléfono Fijo: 2122021</p>
+            </div>
+            <div class="footer-column">
+                <h5>Ubicación</h5>
+                <p>Sede Central:</p>
+                <p>Calle Siempreviva 123</p>
+            </div>
+            <div class="footer-column logo-redes">
+                <img src="imagenes/logo_footer.png" alt="Salud Expres" class="footer-logo">
+                <div class="redes-sociales">
+                    <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="img/Facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="img/linkedin.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copy">
+            © Copyright 2025. Todos los derechos reservados Nombre
+        </div>
+    </footer>
+</body>
+<script>
+    let planSeleccionado = null;
+
+    function seleccionar(elemento, nombrePlan) {
+      document.querySelectorAll('.plan').forEach(p => p.classList.remove('selected'));
+      elemento.classList.add('selected');
+      planSeleccionado = nombrePlan;
+    }
+
+    function comprar() {
+      if (planSeleccionado) {
+        alert('Has elegido: ' + planSeleccionado + '\n¡Gracias por tu compra!');
+        // Aquí podrías redirigir o hacer una llamada a una API de compra
+        // window.location.href = `compra.html?plan=${encodeURIComponent(planSeleccionado)}`;
+      } else {
+        alert('Por favor seleccioná un plan antes de continuar.');
+      }
+    }
+  </script>
+</html>

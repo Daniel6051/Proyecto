@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="perfiles.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/bootstrap.js"></script>
+</head>
+<body class="body">
+    <!-- Barra Superior -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <span><img src="img/correo.png" class="icono"> correoelectronico@gmail.com</span>
+            <span><img src="img/ubicacion.png" alt="Ubicación" class="icono"> Ubicación de la empresa</span>
+            <span><img src="img/llamada-telefonica.png" alt="Teléfono" class="icono"> Teléfono</span>
+        </div>
+    </div>
+
+    <!-- Barra Principal -->
+    <nav class="main-nav">
+        <div class="logo">
+            <a href="#"><img src="imagenes/Logo_Nav.png" alt="Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Ingresar</a></li>
+            <li><a href="#">Registrarme</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Mi Perfil</a></li>
+        </ul>
+    </nav>
+</main>
+
+<section class="perfil-container">
+    <h2>Perfil</h2>
+
+    <div class="foto-perfil">
+      <label for="uploadFoto">
+        <img src="img/usuario.png" alt="Foto de perfil" id="imagenPerfil"/>
+        <input type="file" id="uploadFoto" accept="image/*" hidden>
+      </label>
+    </div>
+
+    <div class="info-perfil" id="perfilInfo">
+      <p><strong>Nombre:</strong> <span contenteditable="false" id="nombre">Lucas</span></p>
+      <p><strong>Apellido:</strong> <span contenteditable="false" id="apellido">Palomar</span></p>
+      <p><strong>DNI:</strong> <span contenteditable="false" id="dni">47392031</span></p>
+      <p><strong>Número:</strong> <span contenteditable="false" id="numero">261239212</span></p>
+      <p><strong>Gmail:</strong> <span contenteditable="false" id="gmail">lucas21@gmail.com</span></p>
+      <p><strong>Plan:</strong> <span contenteditable="false" id="plan">Tarjeta Bronce</span></p>
+      <p><strong>Vencimiento de plan:</strong> <span contenteditable="false" id="vencimiento">20/05/2025</span></p>
+    </div>
+
+    <button id="btnEditar" class="boton-oculto">Modificar Datos</button>
+    <button id="btnGuardar" class="boton-oculto">Guardar Cambios</button>
+  </section>
+
+
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h5>Email</h5>
+            <p>Nombre@Nombre.com.ar</p>
+            <p>Nombre@Nombre.com.ar</p>
+        </div>
+        <div class="footer-column">
+            <h5>Teléfono</h5>
+            <p>Línea Gratuita: 212202</p>
+            <p>Teléfono Fijo: 2122021</p>
+        </div>
+        <div class="footer-column">
+            <h5>Ubicación</h5>
+            <p>Sede Central:</p>
+            <p>Calle Siempreviva 123</p>
+        </div>
+        <div class="footer-column logo-redes">
+            <img src="imagenes/logo_footer.png" alt="Salud Expres" class="footer-logo">
+            <div class="redes-sociales">
+                <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="img/Facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="img/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copy">
+        © Copyright 2025. Todos los derechos reservados Nombre
+    </div>
+</footer>
+</body>
+<script src="perfil.js">
+const inputFoto = document.getElementById('uploadFoto');
+const imagenPerfil = document.getElementById('imagenPerfil');
+
+inputFoto.addEventListener('change', function () {
+  const archivo = this.files[0];
+  if (archivo) {
+    const lector = new FileReader();
+    lector.onload = function (e) {
+      imagenPerfil.src = e.target.result;
+    };
+    lector.readAsDataURL(archivo);
+  }
+});
+
+// Simular si el usuario es admin o no
+const perfilUsuario = "admin"; // Cambiar a "usuario" para probar sin permisos
+
+const btnEditar = document.getElementById("btnEditar");
+const btnGuardar = document.getElementById("btnGuardar");
+const campos = ["nombre", "apellido", "dni", "numero", "gmail", "plan", "vencimiento"];
+
+if (perfilUsuario === "admin") {
+  btnEditar.classList.remove("boton-oculto");
+}
+
+btnEditar.addEventListener("click", () => {
+  campos.forEach(id => {
+    document.getElementById(id).setAttribute("contenteditable", "true");
+    document.getElementById(id).style.borderBottom = "1px dashed #aaa";
+  });
+  btnGuardar.classList.remove("boton-oculto");
+});
+
+btnGuardar.addEventListener("click", () => {
+  campos.forEach(id => {
+    document.getElementById(id).setAttribute("contenteditable", "false");
+    document.getElementById(id).style.borderBottom = "none";
+  });
+  btnGuardar.classList.add("boton-oculto");
+
+  // Si querés, acá podés guardar en localStorage o enviarlo a una base de datos
+  console.log("Datos guardados");
+});
+
+
+</script>
+</html>
